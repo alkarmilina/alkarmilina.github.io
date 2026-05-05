@@ -2,14 +2,12 @@
 body {
     margin: 0;
     padding: 0;
-    /* This sets the serif font for the entire website */
     font-family: "Georgia", "Times New Roman", Times, serif;
     background-color: #ffffff;
     color: #333;
     line-height: 1.6;
 }
 
-/* Flex container that spans full browser width */
 .page-wrapper {
     display: flex;
     flex-direction: row;
@@ -18,7 +16,6 @@ body {
     width: 100%; 
 }
 
-/* Sidebar: Touches the far left edge */
 .sidebar {
     width: 150px;
     background-color: #f4f4f4;
@@ -27,7 +24,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Main Content: Flexible but caps width for readability */
 .main-content {
     flex: 1;
     padding: 40px 60px;
@@ -35,7 +31,6 @@ body {
     max-width: 950px; 
 }
 
-/* --- Sidebar Typography --- */
 .menu-title {
     font-size: 19px;
     font-weight: bold;
@@ -68,7 +63,6 @@ body {
     text-decoration: underline;
 }
 
-/* --- Welcome Header & Double Line --- */
 .welcome-header {
     font-size: 34px;
     color: #3b5998;
@@ -84,7 +78,6 @@ body {
     opacity: 0.5;
 }
 
-/* --- Profile Section --- */
 .header-container {
     display: flex;
     flex-direction: row;
@@ -94,8 +87,8 @@ body {
 }
 
 .profile-img {
-    width: 150px;      /* Even smaller now */
-    height: 195px;     /* Proportionally adjusted */
+    width: 150px;     
+    height: 195px;     
     object-fit: cover;
     border: 1px solid #ccc;
     flex-shrink: 0;
@@ -108,7 +101,6 @@ body {
     color: #000;
 }
 
-/* --- Publications & Service Sections --- */
 h2 {
     color: #3b5998; 
     border-bottom: 1px solid #eee;
@@ -161,7 +153,6 @@ h2 {
     border-left: 3px solid #3b5998;
 }
 
-/* --- BibTeX Box --- */
 .bibtex-details pre {
     background: #fdfdfd;
     border: 1px solid #ddd;
@@ -169,11 +160,9 @@ h2 {
     padding: 12px;
     font-size: 13px;
     margin-top: 10px;
-    /* Pre-formatted text usually stays monospace for alignment */
     font-family: 'Courier New', Courier, monospace; 
 }
 
-/* Mobile Adjustments */
 @media (max-width: 768px) {
     .page-wrapper { flex-direction: column; }
     .sidebar { width: 100%; padding: 20px; border-right: none; border-bottom: 1px solid #ddd; min-height: auto; }
