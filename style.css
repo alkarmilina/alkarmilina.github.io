@@ -1,0 +1,181 @@
+/* --- Global Layout --- */
+body {
+    margin: 0;
+    padding: 0;
+    /* This sets the serif font for the entire website */
+    font-family: "Georgia", "Times New Roman", Times, serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Flex container that spans full browser width */
+.page-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 100vh;
+    width: 100%; 
+}
+
+/* Sidebar: Touches the far left edge */
+.sidebar {
+    width: 150px;
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+/* Main Content: Flexible but caps width for readability */
+.main-content {
+    flex: 1;
+    padding: 40px 60px;
+    background-color: #fff;
+    max-width: 950px; 
+}
+
+/* --- Sidebar Typography --- */
+.menu-title {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    width: 100%;
+    color: #000;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-bottom: 12px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #3b5998; 
+    display: block;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- Welcome Header & Double Line --- */
+.welcome-header {
+    font-size: 34px;
+    color: #3b5998;
+    margin: 0;
+    font-weight: normal;
+}
+
+.double-separator {
+    height: 4px;
+    border-top: 1px solid #3b5998; 
+    border-bottom: 1px solid #3b5998;
+    margin: 10px 0 30px 0;
+    opacity: 0.5;
+}
+
+/* --- Profile Section --- */
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    width: 150px;      /* Even smaller now */
+    height: 195px;     /* Proportionally adjusted */
+    object-fit: cover;
+    border: 1px solid #ccc;
+    flex-shrink: 0;
+}
+.name-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* --- Publications & Service Sections --- */
+h2 {
+    color: #3b5998; 
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 45px;
+    font-size: 24px;
+}
+
+.pub-category h3 {
+    color: #3b5998;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.pub-list {
+    padding-left: 25px;
+}
+
+.pub-list li {
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: #000;
+}
+
+.pub-title {
+    font-weight: bold;
+}
+
+.pub-links a, .bibtex-details summary {
+    color: #3b5998;
+    font-size: 15px;
+    text-decoration: none;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.pub-links a:hover {
+    text-decoration: underline;
+}
+
+.service-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-list li {
+    margin-bottom: 12px;
+    font-size: 17px;
+    padding-left: 15px;
+    border-left: 3px solid #3b5998;
+}
+
+/* --- BibTeX Box --- */
+.bibtex-details pre {
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 12px;
+    font-size: 13px;
+    margin-top: 10px;
+    /* Pre-formatted text usually stays monospace for alignment */
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .page-wrapper { flex-direction: column; }
+    .sidebar { width: 100%; padding: 20px; border-right: none; border-bottom: 1px solid #ddd; min-height: auto; }
+    .header-container { flex-direction: column; align-items: center; text-align: center; }
+}
