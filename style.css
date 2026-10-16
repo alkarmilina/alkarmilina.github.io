@@ -21,8 +21,6 @@ body {
 
 .invisible-hint {
     color: #fff;
-    font-size: 14px;
-    margin: 0 0 8px 0;
 }
 
 .invisible-hint::selection {
