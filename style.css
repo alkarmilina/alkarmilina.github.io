@@ -19,6 +19,22 @@ body {
     cursor: pointer;
 }
 
+.invisible-hint {
+    color: #fff;
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+.invisible-hint::selection {
+    color: #333;
+    background: #b4d5fe;
+}
+
+.invisible-hint::-moz-selection {
+    color: #333;
+    background: #b4d5fe;
+}
+
 .page-wrapper {
     display: flex;
     flex-direction: row;
